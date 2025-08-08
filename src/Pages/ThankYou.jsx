@@ -63,6 +63,15 @@ function ThankYouPage() {
             </div>
           </div>
         </div>
+          
+        <div className="w-full flex justify-center mt-6 lg:mt-10 px-6">
+          <a
+            href="https://www.trustkeyper.com/dashboard"
+            className="bg-blue-900 text-white py-3 px-6 rounded-md w-fit text-center"
+          >
+            Continue →
+          </a>
+        </div>
 
         <p className="text-xs text-gray-400 mt-10">
           By continuing, you agree to TrustKeyper <a href="https://www.trustkeyper.com/terms-and-conditions" className="text-green-600 underline">
@@ -92,4 +101,5 @@ function ThankYouPage() {
 }
 
 export default ThankYouPage;
+
 
