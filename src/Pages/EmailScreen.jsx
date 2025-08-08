@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
 
@@ -7,6 +7,14 @@ function EmailScreen() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
+
+  useEffect(() => {
+  const savedEmail = localStorage.getItem('tkp_email');
+  if (savedEmail) {
+    setEmail(savedEmail);
+  }
+}, []);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -117,3 +125,4 @@ function EmailScreen() {
 
 
 export default EmailScreen;
+
