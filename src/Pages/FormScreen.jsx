@@ -201,19 +201,35 @@ const navigate = useNavigate();
         alt="Illustration"
         className="hidden lg:block fixed bottom-0 right-0 w-64 pointer-events-none select-none"
       />
-    {showPopup && (
-  <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-    <div className="bg-white px-6 py-4 rounded-lg shadow-lg text-center">
-      <h2 className="text-xl font-semibold text-green-600 mb-2">Successfully Submitted!</h2>
-      <p className="text-sm text-gray-600">Your proprety details have been saved</p>
-    </div>
-  </div>
-)}
+       {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 animate-fade">
+          <div className="bg-white px-6 py-4 rounded-lg shadow-lg flex items-center space-x-4 animate-slide-in">
+            {/* Green Check Icon */}
+            <div className="flex-shrink-0">
+              <svg
+                className="w-10 h-10 text-green-600 animate-scale-fade"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            {/* Text Block */}
+            <div>
+              <h2 className="text-lg font-semibold text-green-600 mb-1">Successfully Submitted!</h2>
+              <p className="text-sm text-gray-600">Your property details have been saved</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
     
   );
 }
 
 export default FormPage;
+
 
 
