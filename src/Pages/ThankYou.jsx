@@ -65,7 +65,9 @@ function ThankYouPage() {
         </div>
 
         <p className="text-xs text-gray-400 mt-10">
-          By continuing, you agree to TrustKeyper <span className="text-blue-500">Terms and Conditions</span>
+          By continuing, you agree to TrustKeyper <a href="https://www.trustkeyper.com/terms-and-conditions" className="text-green-600 underline">
+              Terms and Conditions
+            </a>
         </p>
         </div>
       </div>
@@ -90,3 +92,4 @@ function ThankYouPage() {
 }
 
 export default ThankYouPage;
+
