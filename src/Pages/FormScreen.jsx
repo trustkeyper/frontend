@@ -17,7 +17,7 @@ const navigate = useNavigate();
   e.preventDefault();
   setError('');
   setLoading(true);
-  setShowPopup(true);
+  setShowPopup(false);
 
   try {
     const email = localStorage.getItem('tkp_email');
@@ -36,17 +36,19 @@ const navigate = useNavigate();
     });
 
     const data = await res.json();
-    navigate('/thankyou'); 
     if (data.success) {
-      //navigate('/thankyou'); 
+      setShowPopup(true);
+      setTimeout(() => {
+        navigate('/thankyou');
+      }, 1000);
     } else {
       setError(data.message || 'Something went wrong');
     }
-  } catch (err) {
-    setError('Failed to submit form');
-  } finally {
-    setLoading(false);
-  }
+    } catch (err) {
+      setError('Failed to submit form');
+    } finally {
+      setLoading(false);
+    }
 };
   return (
     <div className="flex flex-col lg:flex-row h-screen">
@@ -175,9 +177,10 @@ const navigate = useNavigate();
 
             <button
               type="submit"
-              className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-md"
+              disabled={loading}
+              className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-md disabled:opacity-50"
             >
-              Continue →
+              {loading ? 'Submitting information...' : 'Continue →'}
             </button>
           </div>
         </form>
@@ -212,4 +215,5 @@ const navigate = useNavigate();
 }
 
 export default FormPage;
+
 
