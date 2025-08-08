@@ -39,7 +39,7 @@ export default function LandingScreen() {
 
       <p className="mt-4 text-sm text-gray-500 text-center">
         By continuing, you agree to TrustKeyper{' '}
-        <a href="#" className="text-green-600 underline">
+        <a href="https://www.trustkeyper.com/terms-and-conditions" className="text-green-600 underline">
           Terms and Conditions
         </a>
       </p>
@@ -70,4 +70,5 @@ export default function LandingScreen() {
 </div>
   );
 }
+
 
