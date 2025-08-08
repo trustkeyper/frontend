@@ -25,7 +25,7 @@ export default function LandingScreen() {
     </div>
 
     {/* ✅ Top Section */}
-    <div className="flex flex-col justify-center items-center h-[40vh] lg:h-auto w-full">
+    <div className="flex flex-col justify-center items-center h-[60vh] lg:h-auto w-full">
       <h1 className="text-2xl md:text-3xl font-semibold text-center mb-6">
         Log in or sign up in seconds
       </h1>
@@ -70,3 +70,4 @@ export default function LandingScreen() {
 </div>
   );
 }
+
