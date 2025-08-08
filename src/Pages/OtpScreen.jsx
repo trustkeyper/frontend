@@ -113,9 +113,12 @@ function OtpScreen() {
             <span className="text-black font-medium">
               {localStorage.getItem('tkp_email')}
             </span>
-            <a href="/email" className="text-blue-600 underline ml-2">
+            <span
+              className="text-blue-600 underline ml-2 cursor-pointer"
+              onClick={() => navigate('/email')}
+            >
               Change
-            </a>
+            </span>
           </p>
 
           {/* OTP Boxes */}
@@ -194,3 +197,4 @@ function OtpScreen() {
 
 
 export default OtpScreen;
+
