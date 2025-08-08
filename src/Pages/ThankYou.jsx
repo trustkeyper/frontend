@@ -20,64 +20,89 @@ function ThankYouPage() {
           <img src="/mobile-logo.png" alt="Logo" className="h-12 mx-auto" />
         </div>
 
-        <div className="flex flex-col justify-center items-center h-[60vh] lg:h-auto w-full">
+                <div className="flex flex-col justify-center items-center h-[60vh] lg:h-auto w-full">
           <CircleCheck className="w-16 h-16 mx-auto text-green-500" />
-        <h2 className="text-2xl font-semibold mt-4">Property Details Submitted</h2>
-        <p className="text-gray-600 mt-1">We’ll get back to you!</p>
+          <h2 className="text-2xl font-semibold mt-4">Property Details Submitted</h2>
+          <p className="text-gray-600 mt-1">We’ll get back to you!</p>
 
-        <p className="text-gray-500 mt-6 text-sm">
-          Thank you for providing your property details. We’re excited to partner with you!
-        </p>
+          <p className="text-gray-500 mt-6 text-sm text-center px-4">
+            Thank you for providing your property details. We’re excited to partner with you!
+          </p>
 
-        <div className="mt-8 space-y-6 text-left">
-          <div className="flex items-start space-x-4">
-            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-              <House></House>
-              {/* <div className="w-2.5 h-2.5 bg-green-500 rounded-full" /> */}
+          {/* Steps Box */}
+          <div className="mt-10 w-full max-w-md bg-gray-100 p-6 rounded-md">
+          <h3 className="text-center text-sm font-bold text-gray-700 mb-2">What happens next?</h3>
+
+          <div className="flex flex-col space-y-10 relative">
+            {/* Vertical line */}
+            <div className="absolute left-5 top-12 bottom-36 z-0">
+              {/* First line: Blue */}
+              <div className="h-[100px] border-l-2 border-gray-300"></div>
+              {/* Second line: Gray */}
+              <div className="h-[100px] border-l-2 border-gray-300"></div>
+          </div>
+
+            {/* Step 1 */}
+            <div className="flex items-start space-x-4 z-10">
+              <div className="relative z-10">
+                <div className="w-10 h-10 rounded-full border-2 border-blue-600 flex items-center justify-center text-blue-600 bg-white">
+                  <House className="w-5 h-5" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <h4 className="font-semibold text-gray-800">Property Visit</h4>
+                <p className="text-sm text-gray-600">
+                  Our team will get on a phone call with you & schedule a visit to your property
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="font-medium text-gray-800">Property Visit</h3>
-              <p className="text-sm text-gray-500">Our team will schedule a visit to your property if needed.</p>
+
+            {/* Step 2 */}
+            <div className="flex items-start space-x-4 z-10">
+              <div className="relative z-10">
+                <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center text-gray-500 bg-white">
+                  <FileText className="w-5 h-5" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <h4 className="font-semibold text-gray-800">Documentation</h4>
+                <p className="text-sm text-gray-600">
+                  Complete necessary paperwork and agreements
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex items-start space-x-4 z-10">
+              <div className="relative z-10">
+                <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center text-gray-500 bg-white">
+                  <CheckCircle className="w-5 h-5" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <h4 className="font-semibold text-gray-800">All Set!</h4>
+                <p className="text-sm text-gray-600">
+                  Start receiving your monthly payments. We’ll handle everything else.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="flex items-start space-x-4">
-            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-             <FileText />
-              {/* <div className="w-2.5 h-2.5 bg-blue-500 rounded-full" /> */}
+            {/* Button and Terms */}
+            <div className="w-full flex justify-center mt-8">
+              <a
+                href="https://www.trustkeyper.com/dashboard"
+                className="bg-blue-900 text-white py-3 px-6 rounded-md text-center"
+              >
+                Continue →
+              </a>
             </div>
-            <div>
-              <h3 className="font-medium text-gray-800">Documentation</h3>
-              <p className="text-sm text-gray-500">Complete necessary paperwork and agreements.</p>
-            </div>
-          </div>
 
-          <div className="flex items-start space-x-4">
-            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-              <CheckCircle />
-              {/* <div className="w-2.5 h-2.5 bg-purple-500 rounded-full" /> */}
-            </div>
-            <div>
-              <h3 className="font-medium text-gray-800">All Set!</h3>
-              <p className="text-sm text-gray-500">Start receiving your monthly payments. We’ll handle everything else.</p>
-            </div>
+            <p className="text-xs text-gray-400 mt-4 text-center">
+              By continuing, you agree to TrustKeyper{' '}
+              <a href="#" className="text-blue-500 underline">Terms and Conditions</a>
+            </p>
           </div>
-        </div>
-          
-        <div className="w-full flex justify-center mt-6 lg:mt-10 px-6">
-          <a
-            href="https://www.trustkeyper.com/dashboard"
-            className="bg-blue-900 text-white py-3 px-6 rounded-md w-fit text-center"
-          >
-            Continue →
-          </a>
-        </div>
-
-        <p className="text-xs text-gray-400 mt-10">
-          By continuing, you agree to TrustKeyper <a href="https://www.trustkeyper.com/terms-and-conditions" className="text-green-600 underline">
-              Terms and Conditions
-            </a>
-        </p>
         </div>
       </div>
 
@@ -101,5 +126,6 @@ function ThankYouPage() {
 }
 
 export default ThankYouPage;
+
 
 
