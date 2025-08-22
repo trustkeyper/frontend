@@ -36,7 +36,7 @@ function OtpScreen() {
     const otpCode = otp.join('');
 
     try {
-      const res = await fetch('https://backend-ef5a.onrender.com/verify-otp', {
+      const res = await fetch('https://api.trustkeyper.com/verify-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, otp: otpCode }),
@@ -63,7 +63,7 @@ function OtpScreen() {
     const email = localStorage.getItem('tkp_email');
 
     try {
-      const res = await fetch('https://backend-ef5a.onrender.com/send-otp', {
+      const res = await fetch('https://api.trustkeyper.com/send-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
@@ -197,4 +197,5 @@ function OtpScreen() {
 
 
 export default OtpScreen;
+
 
